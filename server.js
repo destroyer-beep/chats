@@ -8,7 +8,7 @@ app.use('/', authRouter);
 
 function startServer() {
     try {
-        app.listen(PORT, () => console.log('Server started!'));
+        app.listen(PORT, () => console.log(`Server started! ${PORT}`));
     }   catch (e) {
         console.error('Error server started!', e);
     }
