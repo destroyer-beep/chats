@@ -19,10 +19,12 @@ const userSlice = createSlice({
             state.id = action.payload.id;
             state.name = action.payload.name;
         },
-        removeUser(state, action) {
-            state.id = null;
-            state.name = null;
-        },
+        removeUser(state, action:PayloadAction<{userExit:boolean}>) {
+            if(action.payload.userExit) {
+                state.id = null;
+                state.name = null;
+            }
+        }
     }
 })
 
